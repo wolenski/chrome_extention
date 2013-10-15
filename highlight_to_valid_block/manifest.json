@@ -1,0 +1,21 @@
+{
+	"name": "HightToValidNormalBlock",
+	"description": "Highlight to valid normal block",
+	"version" : "1.0",
+	"manifest_version": 2,
+	"permissions": [ "tabs", "http://*/", "https://*/" ],
+	"browser_action": {
+	  "default_icon": "images/icon.png",
+	  "default_popup": "popup.html"
+	},
+	"options_page": "options.html",
+	"background": "background.html",
+ "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_idle",
+      "css": ["jquery-ui.css"]
+    }
+  ]
+
+}
